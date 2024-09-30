@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChangeColorOnFullOverlapWithColorCheck : MonoBehaviour
+public class ChangeColorOnOverlap : MonoBehaviour
 {
     public Color overlapColor = Color.magenta;  // Purple color
     private Color originalColor;
