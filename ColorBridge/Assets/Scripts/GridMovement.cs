@@ -8,6 +8,9 @@ public class GridMovement : MonoBehaviour
     public float distance = 1.0f;
     private Vector2 targetPosition;
 
+    public float minX = 0f, minY = 0f;
+    public float maxX = 10f, maxY = 10f;
+
     void Start()
     {
         targetPosition = transform.position;
@@ -19,19 +22,23 @@ public class GridMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                targetPosition += Vector2.up * distance;
+                Vector2 newPosition = targetPosition + Vector2.up * distance;
+                if (newPosition.y <= maxY) targetPosition = newPosition;
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                targetPosition += Vector2.down * distance;
+                Vector2 newPosition = targetPosition + Vector2.down * distance;
+                if (newPosition.y >= minY) targetPosition = newPosition;
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                targetPosition += Vector2.left * distance;
+                Vector2 newPosition = targetPosition + Vector2.left * distance;
+                if (newPosition.x >= minX) targetPosition = newPosition;
             }
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                targetPosition += Vector2.right * distance;
+                Vector2 newPosition = targetPosition + Vector2.right * distance;
+                if (newPosition.x <= maxX) targetPosition = newPosition;
             }
         }
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, distance * 10);
