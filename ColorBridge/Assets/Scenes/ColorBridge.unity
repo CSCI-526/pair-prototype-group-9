@@ -155,9 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 19175319}
+  sonGridBorder: {fileID: 207329270}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &19175321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -344,9 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 23979417}
+  sonGridBorder: {fileID: 1373189733}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &23979419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -701,9 +705,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 161224276}
+  sonGridBorder: {fileID: 2093459790}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &161224278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -977,6 +983,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 217890856}
   sonGridBorder: {fileID: 1346427182}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &217890858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1247,9 +1255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 475574638}
+  sonGridBorder: {fileID: 69916318}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &475574640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1699,6 +1709,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 712491348}
   sonGridBorder: {fileID: 962037022}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &712491350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1888,6 +1900,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 798670960}
   sonGridBorder: {fileID: 979547768}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &798670962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2362,6 +2376,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 906072098}
   sonGridBorder: {fileID: 1616819813}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &906072100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2803,6 +2819,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 1077369604}
   sonGridBorder: {fileID: 1875502092}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &1077369606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3325,9 +3343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 1412735527}
+  sonGridBorder: {fileID: 1928844164}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &1412735529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3924,6 +3944,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 1594163246}
   sonGridBorder: {fileID: 1220901115}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!1 &1616819813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,9 +4063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 1704730271}
+  sonGridBorder: {fileID: 617629371}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &1704730273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4599,9 +4623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 1979611558}
+  sonGridBorder: {fileID: 962195310}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &1979611560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4788,9 +4814,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf77274ab09144c8bad553c1e14cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fatherGrid: {fileID: 0}
-  sonGrid: {fileID: 0}
-  sonGridBorder: {fileID: 0}
+  fatherGrid: {fileID: 1818859298}
+  sonGrid: {fileID: 2065753536}
+  sonGridBorder: {fileID: 2128273615}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &2065753538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4980,6 +5008,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 2092716577}
   sonGridBorder: {fileID: 1545008648}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &2092716579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5421,6 +5451,8 @@ MonoBehaviour:
   fatherGrid: {fileID: 900605124}
   sonGrid: {fileID: 2129517845}
   sonGridBorder: {fileID: 354468470}
+  targetColor: {r: 0.49, g: 0, b: 1, a: 1}
+  tolerance: 0.01
 --- !u!61 &2129517847
 BoxCollider2D:
   m_ObjectHideFlags: 0
