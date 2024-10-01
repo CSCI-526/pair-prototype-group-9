@@ -40,8 +40,8 @@ public class ControlSwitch : MonoBehaviour
                 blueGrid.GetComponent<GridMovement>().enabled = false;
 
                 playerBorder.SetActive(false);
-                redGridBorder.SetActive(true);
-                blueGridBorder.SetActive(false);
+                // redGridBorder.SetActive(true);
+                // blueGridBorder.SetActive(false);
                 break;
 
             case ControlMode.BlueGrid:
@@ -50,8 +50,8 @@ public class ControlSwitch : MonoBehaviour
                 blueGrid.GetComponent<GridMovement>().enabled = true;
 
                 playerBorder.SetActive(false);
-                redGridBorder.SetActive(false);
-                blueGridBorder.SetActive(true);
+                // redGridBorder.SetActive(false);
+                // blueGridBorder.SetActive(true);
                 break;
         }
     }

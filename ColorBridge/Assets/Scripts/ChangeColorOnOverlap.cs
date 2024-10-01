@@ -1,105 +1,87 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeColorOnOverlap : MonoBehaviour
 {
-    public Color overlapColor = Color.magenta;  // Purple color
-    private Color originalColor;
     private SpriteRenderer spriteRenderer;
-    private Collider2D collider2D;
+
+    private Color originalColor;
+
+    // Store references to the prefabs we're fully overlapping with
+    private HashSet<GameObject> fullyOverlappingPrefabs = new HashSet<GameObject>();
+
+    public string targetTag; // The tag of the prefabs we want to overlap with (SetB if this is SetA)
 
     void Start()
     {
-        // Get the SpriteRenderer component
+        // Get the SpriteRenderer component of this prefab
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider2D = GetComponent<Collider2D>();
-
         if (spriteRenderer != null)
         {
             originalColor = spriteRenderer.color;  // Store the initial color
             Debug.Log(gameObject.name + " initialized with original color: " + originalColor);
         }
-        else
-        {
-            Debug.LogError(gameObject.name + " has no SpriteRenderer component!");
-        }
-
-        if (collider2D == null)
-        {
-            Debug.LogError(gameObject.name + " has no Collider2D component!");
-        }
     }
 
-    // Called when the prefabs start overlapping (2D trigger)
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the other object has the 'Prefab' tag
-        if (other.gameObject.CompareTag("Prefab"))
+        if (other.CompareTag(targetTag)) // Check if the overlapping prefab belongs to the target set
         {
-            SpriteRenderer otherSpriteRenderer = other.GetComponent<SpriteRenderer>();
-
-            // Check if the other object has a SpriteRenderer
-            if (otherSpriteRenderer != null)
+            if (IsFullyOverlapping(other))
             {
-                // Ensure they have different original colors
-                if (otherSpriteRenderer.color != originalColor)
-                {
-                    // Check if the sprites are fully overlapping (bounds containment)
-                    if (IsFullyOverlapping(other))
-                    {
-                        Debug.Log(gameObject.name + " fully overlaps with " + other.gameObject.name + " and has a different original color.");
-                        ChangeToOverlapColor();
-                    }
-                    else
-                    {
-                        ChangeToOriginalColor();  // Revert to original color if not fully overlapping
-                    }
-                }
-                else
-                {
-                    Debug.Log(gameObject.name + " and " + other.gameObject.name + " have the same original color. No color change.");
-                    ChangeToOriginalColor();  // Revert to original color if colors are the same
-                }
+                fullyOverlappingPrefabs.Add(other.gameObject);
+                UpdateColor();
             }
         }
     }
 
-    // Called when the prefabs stop overlapping (2D trigger)
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag(targetTag))
+        {
+            if (IsFullyOverlapping(other))
+            {
+                fullyOverlappingPrefabs.Add(other.gameObject);
+            }
+            else
+            {
+                fullyOverlappingPrefabs.Remove(other.gameObject);
+            }
+            UpdateColor();
+        }
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Prefab"))
+        if (other.CompareTag(targetTag))
         {
-            Debug.Log(gameObject.name + " stopped overlapping with " + other.gameObject.name);
-            ChangeToOriginalColor();
+            fullyOverlappingPrefabs.Remove(other.gameObject);
+            UpdateColor();
         }
     }
 
-    // Check if two colliders are fully overlapping by comparing bounds
-    private bool IsFullyOverlapping(Collider2D other)
+    bool IsFullyOverlapping(Collider2D other)
     {
-        Bounds thisBounds = collider2D.bounds;
+        Bounds thisBounds = GetComponent<Collider2D>().bounds;
         Bounds otherBounds = other.bounds;
 
-        // Check if the bounds of the current sprite are fully contained within the other sprite's bounds
-        return otherBounds.Contains(thisBounds.min) && otherBounds.Contains(thisBounds.max);
+        // Check if this prefab's bounds fully contain the other prefab's bounds and vice versa
+        bool fullyOverlapping = thisBounds.Contains(otherBounds.min) && thisBounds.Contains(otherBounds.max);
+        bool reverseOverlapping = otherBounds.Contains(thisBounds.min) && otherBounds.Contains(thisBounds.max);
+
+        return fullyOverlapping && reverseOverlapping;
     }
 
-    // Change the color to the overlap color
-    private void ChangeToOverlapColor()
+    void UpdateColor()
     {
-        if (spriteRenderer != null)
+        if (fullyOverlappingPrefabs.Count > 0)
         {
-            spriteRenderer.color = overlapColor;
-            Debug.Log(gameObject.name + " color changed to: " + overlapColor);
+            spriteRenderer.color = new Color(0.49f, 0.0f, 1.0f, 1.0f);
         }
-    }
-
-    // Revert the color to the original one
-    private void ChangeToOriginalColor()
-    {
-        if (spriteRenderer != null)
+        else
         {
             spriteRenderer.color = originalColor;
-            Debug.Log(gameObject.name + " color reverted to: " + originalColor);
         }
     }
 }
