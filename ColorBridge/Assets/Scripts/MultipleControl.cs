@@ -6,6 +6,9 @@ public class MultipleControl : MonoBehaviour
     public GameObject sonGrid;
     public GameObject sonGridBorder;
 
+    public Color targetColor = new Color(0.49f, 0.0f, 1.0f, 1.0f);
+
+    public float tolerance = 0.01f;
 
     void Update()
     {
@@ -21,7 +24,24 @@ public class MultipleControl : MonoBehaviour
                 }
                 if (gridMovement.enabled)
                 {
-                    PerformActionEnable();
+                    if (sonGrid != null)
+                    {
+                        SpriteRenderer spriteRenderer = sonGrid.GetComponent<SpriteRenderer>();
+                        if (spriteRenderer != null)
+                        {
+                            Color spriteColor = spriteRenderer.color;
+                            if (ColorsAreClose(spriteColor, targetColor, tolerance))
+                            {
+                                PerformActionDisable();
+                                Debug.Log("目标对象的 Sprite 颜色是 RGBA(0.49, 0.0, 1.0, 1.0)。");
+                            }
+                            else
+                            {
+                                PerformActionEnable();
+                                Debug.Log("目标对象的 Sprite 颜色不是 RGBA(0.49, 0.0, 1.0, 1.0)。");
+                            }
+                        }
+                    }
                 }
             }
             else
@@ -45,6 +65,14 @@ public class MultipleControl : MonoBehaviour
         // Debug.Log("GridMovement is enabled on redGrid. Performing action...");
         sonGridBorder.SetActive(true);
 
+    }
+
+    bool ColorsAreClose(Color color1, Color color2, float tolerance)
+    {
+        return Mathf.Abs(color1.r - color2.r) < tolerance &&
+               Mathf.Abs(color1.g - color2.g) < tolerance &&
+               Mathf.Abs(color1.b - color2.b) < tolerance &&
+               Mathf.Abs(color1.a - color2.a) < tolerance;
     }
 }
 
