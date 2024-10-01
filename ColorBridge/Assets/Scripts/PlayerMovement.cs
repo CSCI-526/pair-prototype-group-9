@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float distance = 1.0f;
     private Vector2 targetPosition;
     public LayerMask tileLayer;
+    public TextMeshProUGUI endText;
 
     public float minX = 0f, minY = 0f;
     public float maxX = 10f, maxY = 10f;
@@ -14,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         targetPosition = transform.position;
+        endText.gameObject.SetActive(false);
     }
 
     void Update()
@@ -60,8 +63,12 @@ public class PlayerMovement : MonoBehaviour
             if (tileRenderer != null)
             {
                 Color tileColor = tileRenderer.color;
-                if (tileColor == Color.green || tileColor == new Color(125f / 255f, 0f / 255f, 255f / 255f, 255f / 255f))
+                if (tileColor == Color.green || tileColor == Color.yellow || tileColor == new Color(0.49f, 0.0f, 1.0f, 1.0f))
                 {
+                    if (tileColor == Color.green && endText != null)
+                    {
+                        endText.gameObject.SetActive(true);
+                    }
                     return true;
                 }
             }
