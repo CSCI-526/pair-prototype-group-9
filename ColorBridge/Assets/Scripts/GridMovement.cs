@@ -6,7 +6,7 @@ using UnityEngine;
 public class GridMovement : MonoBehaviour
 {
     public float distance = 1.0f;
-    private Vector2 targetPosition;
+    // private Vector2 targetPosition;
 
     public float minX = 0f, minY = 0f;
     public float maxX = 10f, maxY = 10f;
@@ -14,13 +14,13 @@ public class GridMovement : MonoBehaviour
 
     void Start()
     {
-        targetPosition = transform.position;
+        // targetPosition = transform.position;
     }
 
     void Update()
     {
-        if ((Vector2)transform.position == targetPosition)
-        {
+        // if ((Vector2)transform.position == targetPosition)
+        // {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 int checkpoint = 0;
@@ -33,8 +33,8 @@ public class GridMovement : MonoBehaviour
                 if(checkpoint==0){
                     foreach (GameObject obj in objectsToMove){
                     obj.transform.Translate(Vector2.up * distance);}
-                    Vector2 newPosition = targetPosition + Vector2.up * distance;
-                    targetPosition = newPosition;
+                    // Vector2 newPosition = targetPosition + Vector2.up * distance;
+                    // targetPosition = newPosition;
                 // if (newPosition.y <= maxY) targetPosition = newPosition;
                 }
                 
@@ -51,8 +51,8 @@ public class GridMovement : MonoBehaviour
                 if(checkpoint==0){
                     foreach (GameObject obj in objectsToMove){
                         obj.transform.Translate(Vector2.down * distance);}
-                    Vector2 newPosition = targetPosition + Vector2.down * distance;
-                    targetPosition = newPosition;
+                    // Vector2 newPosition = targetPosition + Vector2.down * distance;
+                    // targetPosition = newPosition;
                 }
                 // Vector2 newPosition = targetPosition + Vector2.down * distance;
                 // if (newPosition.y >= minY) targetPosition = newPosition;
@@ -69,8 +69,8 @@ public class GridMovement : MonoBehaviour
                 if(checkpoint==0){
                     foreach (GameObject obj in objectsToMove){
                     obj.transform.Translate(Vector2.left * distance);}
-                    Vector2 newPosition = targetPosition + Vector2.left * distance;
-                    targetPosition = newPosition;
+                    // Vector2 newPosition = targetPosition + Vector2.left * distance;
+                    // targetPosition = newPosition;
                 }
 
                 // Vector2 newPosition = targetPosition + Vector2.left * distance;
@@ -89,13 +89,13 @@ public class GridMovement : MonoBehaviour
                 if(checkpoint==0){
                     foreach (GameObject obj in objectsToMove){
                     obj.transform.Translate(Vector2.right * distance);}
-                    Vector2 newPosition = targetPosition + Vector2.right * distance;
-                    targetPosition = newPosition;
+                    // Vector2 newPosition = targetPosition + Vector2.right * distance;
+                    // targetPosition = newPosition;
                 }
                 // Vector2 newPosition = targetPosition + Vector2.right * distance;
                 // if (newPosition.x <= maxX) targetPosition = newPosition;
             }
-        }
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, distance * 10);
+        // }
+        // transform.position = Vector2.MoveTowards(transform.position, targetPosition, distance * 10);
     }
 }
