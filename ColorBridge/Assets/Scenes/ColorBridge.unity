@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 19175320}
   m_Layer: 0
   m_Name: BlueGrid (7)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &19175324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 23979418}
   m_Layer: 0
   m_Name: BlueGrid (5)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &23979422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 161224277}
   m_Layer: 0
   m_Name: BlueGrid (8)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &161224281
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 217890857}
   m_Layer: 0
   m_Name: RedGrid (8)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &217890861
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 475574639}
   m_Layer: 0
   m_Name: BlueGrid (3)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &475574643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1689,7 +1689,7 @@ GameObject:
   - component: {fileID: 712491349}
   m_Layer: 0
   m_Name: RedGrid (3)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &712491353
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1880,7 +1880,7 @@ GameObject:
   - component: {fileID: 798670961}
   m_Layer: 0
   m_Name: RedGrid (4)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &798670965
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2155,7 +2155,7 @@ GameObject:
   - component: {fileID: 900605128}
   m_Layer: 0
   m_Name: RedGrid
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2339,7 +2339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!1 &906072098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,7 +2356,7 @@ GameObject:
   - component: {fileID: 906072099}
   m_Layer: 0
   m_Name: RedGrid (6)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2462,7 +2462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &906072103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2799,7 +2799,7 @@ GameObject:
   - component: {fileID: 1077369605}
   m_Layer: 0
   m_Name: RedGrid (2)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &1077369609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 1412735528}
   m_Layer: 0
   m_Name: BlueGrid (4)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &1412735532
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3771,7 +3771,7 @@ GameObject:
   - component: {fileID: 1594163253}
   m_Layer: 0
   m_Name: RedGrid (1)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3876,7 +3876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &1594163252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4046,7 +4046,7 @@ GameObject:
   - component: {fileID: 1704730272}
   m_Layer: 0
   m_Name: BlueGrid (6)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4152,7 +4152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &1704730276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4237,7 +4237,7 @@ GameObject:
   - component: {fileID: 1818859302}
   m_Layer: 0
   m_Name: BlueGrid
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4421,7 +4421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!1 &1875502092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4606,7 +4606,7 @@ GameObject:
   - component: {fileID: 1979611559}
   m_Layer: 0
   m_Name: BlueGrid (2)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4712,7 +4712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &1979611563
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4797,7 +4797,7 @@ GameObject:
   - component: {fileID: 2065753537}
   m_Layer: 0
   m_Name: BlueGrid (1)
-  m_TagString: Prefab
+  m_TagString: BlueGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: RedGrid
 --- !u!212 &2065753541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4988,7 +4988,7 @@ GameObject:
   - component: {fileID: 2092716578}
   m_Layer: 0
   m_Name: RedGrid (7)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &2092716582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5431,7 +5431,7 @@ GameObject:
   - component: {fileID: 2129517846}
   m_Layer: 0
   m_Name: RedGrid (5)
-  m_TagString: Prefab
+  m_TagString: RedGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5537,7 +5537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6893c507163f94566aca731841cfa5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapColor: {r: 0.49019608, g: 0, b: 1, a: 1}
+  targetTag: BlueGrid
 --- !u!212 &2129517850
 SpriteRenderer:
   m_ObjectHideFlags: 0
