@@ -1,4 +1,4 @@
 # Color Bridge
 
 GitHub Pages Link:
-https://github.com/genia-dru/ColorBridge
+https://genia-dru.github.io/ColorBridge/
