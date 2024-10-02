@@ -33,12 +33,12 @@ public class MultipleControl : MonoBehaviour
                             if (ColorsAreClose(spriteColor, targetColor, tolerance))
                             {
                                 PerformActionDisable();
-                                Debug.Log("目标对象的 Sprite 颜色是 RGBA(0.49, 0.0, 1.0, 1.0)。");
+                                // Debug.Log("目标对象的 Sprite 颜色是 RGBA(0.49, 0.0, 1.0, 1.0)。");
                             }
                             else
                             {
                                 PerformActionEnable();
-                                Debug.Log("目标对象的 Sprite 颜色不是 RGBA(0.49, 0.0, 1.0, 1.0)。");
+                                // Debug.Log("目标对象的 Sprite 颜色不是 RGBA(0.49, 0.0, 1.0, 1.0)。");
                             }
                         }
                     }

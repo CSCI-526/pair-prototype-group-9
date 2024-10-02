@@ -25,7 +25,7 @@ public class ControlSwitch : MonoBehaviour
         switch (currentMode)
         {
             case ControlMode.Player:
-                player.GetComponent<GridMovement>().enabled = true;
+                player.GetComponent<PlayerMovement>().enabled = true;
                 redGrid.GetComponent<GridMovement>().enabled = false;
                 blueGrid.GetComponent<GridMovement>().enabled = false;
 
@@ -35,23 +35,23 @@ public class ControlSwitch : MonoBehaviour
                 break;
 
             case ControlMode.RedGrid:
-                player.GetComponent<GridMovement>().enabled = false;
+                player.GetComponent<PlayerMovement>().enabled = false;
                 redGrid.GetComponent<GridMovement>().enabled = true;
                 blueGrid.GetComponent<GridMovement>().enabled = false;
 
                 playerBorder.SetActive(false);
-                redGridBorder.SetActive(true);
-                blueGridBorder.SetActive(false);
+                // redGridBorder.SetActive(true);
+                // blueGridBorder.SetActive(false);
                 break;
 
             case ControlMode.BlueGrid:
-                player.GetComponent<GridMovement>().enabled = false;
+                player.GetComponent<PlayerMovement>().enabled = false;
                 redGrid.GetComponent<GridMovement>().enabled = false;
                 blueGrid.GetComponent<GridMovement>().enabled = true;
 
                 playerBorder.SetActive(false);
-                redGridBorder.SetActive(false);
-                blueGridBorder.SetActive(true);
+                // redGridBorder.SetActive(false);
+                // blueGridBorder.SetActive(true);
                 break;
         }
     }
